@@ -1,0 +1,55 @@
+:root {
+    --pale-purple: #F1EEFF;
+    --dark-purple: #6C5DD4;
+    --pale-grey: #C8C8C8;
+    --dark-grey: #6C6C6C;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.pale-Purple-btn {
+    border-radius: 0.5rem;
+    color: #6C5DD4;
+    background-color: #F1EEFF;
+    font-weight: 500;
+}
+
+.pale-Purple-btn:hover {
+    color: #F1EEFF;
+    background-color: #6C5DD4;
+    cursor: pointer;
+}
+
+.dark-Purple-btn {
+    border-radius: 0.5rem;
+    color: #F1EEFF;
+    background-color: #6C5DD4;
+    font-weight: 500;
+}
+
+.dark-Purple-btn:hover {
+    color: #6C5DD4;
+    background-color: #F1EEFF;
+    cursor: pointer;
+}
+
+.banner {
+    background: linear-gradient(to right, rgb(0 0 0 / 77%), rgb(255 255 255 / 0%)), url(/imgs/banner.jpg);
+    background-size: cover;
+    background-position: center top;
+    height: 450px;
+}
+
+.three-dots {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.trend-book:hover .trend-book__actions {
+    display: flex;
+}

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link href="stylesheets/main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+  <body>
+    <nav class="py-6 px-14">
+        <div class="h-10 flex justify-between">
+            <div class="flex items-center gap-2">
+                <div class="text-white text-xl bg-DarkPurple rounded-lg px-3 h-full w-fit flex items-center">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                </div>
+                <p class="text-black text-2xl font-bold">MOBook</p>
+            </div>
+            <div class="flex w-1/2">
+                <!-- <div class="h-full px-3 bg-DarkPurple text-white text-2xl flex items-center rounded-l-lg">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div> -->
+                <form class="flex w-full">
+                    <input type="text" class="h-full border border-DarkPurple outline-none px-3 w-full rounded-l-lg border-r-0">
+                    <button type="submit" class="px-3 border border-DarkPurple h-full rounded-r-lg text-DarkPurple text-xl hover:bg-DarkPurple hover:text-PalePurple"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+            <div class="flex gap-3">
+                <div class="pale-Purple-btn px-4 flex items-center">
+                    Sign In
+                </div>
+                <div class="dark-Purple-btn px-4 flex items-center">
+                    Sign Up
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="py-3 bg-DarkPurple">
+        <div class="w-fit mx-auto flex gap-32 text-base text-PaleGrey">
+            <a class="hover:text-white" href="">Home</a>
+            <a class="hover:text-white" href="">About</a>
+            <a class="hover:text-white" href="">Contact</a>
+            <a class="hover:text-white" href="">Book</a>
+            <a class="hover:text-white" href="">Magazine</a>
+        </div>
+    </div>
+
+    <div class="px-14 py-10 grid grid-cols-8 gap-5">
+        <div class="banner col-span-6 rounded-lg text-white pl-6 flex flex-col justify-center gap-3">
+            <p class="text-4xl font-semibold">Every Book Lover<br>Deserves<br>A Well-Stocked Library</p>
+            <p class="w-3/5">At MOBook, we bring every book lover's dream to life. Unearth a curated collection of classics, bestsellers, and hidden gems. Build your own haven of literary wonders with us – because every book lover deserves a well-stocked library</p>
+            <a href="" class="dark-Purple-btn flex w-fit py-2 px-3 items-center gap-3">
+                <p>Show now</p>
+                <i class="fa-solid fa-angle-right"></i>
+            </a>
+        </div>
+        <div class="col-span-2 relative">
+            <button class="absolute z-10 top-0 bottom-0 text-white text-3xl left-10 hover:text-DarkPurple"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="absolute z-10 top-0 bottom-0 text-white text-3xl right-10 hover:text-DarkPurple"><i class="fa-solid fa-angle-right"></i></button>
+            <div class="h-full w-full rounded-lg" style="background-image: url(imgs/tamlyhoc.jpg); background-size: cover;">
+                <div class="rounded-lg h-full w-full backdrop-blur-md flex items-center justify-center">
+                    <div class="text-white flex flex-col items-center w-fit">
+                        <p class="font-semibold text-2xl">Best Seller</p>
+                        <p>Based on this month</p>
+                        <img src="/imgs/tamlyhoc.jpg" class="rounded-lg w-32 object-contain my-3">
+                        <p>Tam Ly Hoc</p>
+                        <p class="text-DarkYellow text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </p>
+                        <div class="flex gap-2 justify-between w-full mt-2">
+                            <button class="pale-Purple-btn py-2 w-full">125.000đ</button>
+                            <a href="" class="flex items-center dark-Purple-btn px-3"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-14 grid grid-cols-4 gap-8">
+        <div class="flex gap-2 items-center">
+            <div class="bg-PalePurple text-DarkPurple px-3 h-11 rounded-lg text-2xl flex items-center">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+                <p class="font-semibold mb-1">Secure Transactions</p>
+                <p class="text-xs text-DarkGrey">Ensuring peace of mind with robust security measures for all your online transactions</p>
+            </div>
+        </div>
+        <div class="flex gap-2 items-center">
+            <div class="bg-PalePurple text-DarkPurple px-3 h-11 rounded-lg text-2xl flex items-center">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+            <div>
+                <p class="font-semibold mb-1">Responsive Support</p>
+                <p class="text-xs text-DarkGrey">Experience responsive customer support, quick assistance and a delightful shopping journey</p>
+            </div>
+        </div>
+        <div class="flex gap-2 items-center">
+            <div class="bg-PalePurple text-DarkPurple px-3 h-11 rounded-lg text-2xl flex items-center">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div>
+                <p class="font-semibold mb-1">User-Friendly</p>
+                <p class="text-xs text-DarkGrey">Enjoy a seamless and intuitive browsing experience, making book discovery</p>
+            </div>
+        </div>
+        <div class="flex gap-2 items-center">
+            <div class="bg-PalePurple text-DarkPurple px-3 h-11 rounded-lg text-xl flex items-center">
+                <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div>
+                <p class="font-semibold mb-1">Global Shipping</p>
+                <p class="text-xs text-DarkGrey">From our bookstore to your doorstep, experience convenient and reliable global shipping services</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-10/12 mx-auto my-32 text-center">
+        <p class="font-bold text-3xl mb-2">Trending this week</p>
+        <p class="text-DarkGrey w-1/2 mx-auto">Instead of creating a shadow behind your selection, inner shadows are applied within the layer or object. This contains the shadow within the layer's bounds.</p>
+        <div class="grid grid-cols-5 gap-10 mt-10">
+            <div class="trend-book flex flex-col items-center hover:drop-shadow-2xl hover:cursor-pointer">
+                <img src="imgs/tamlyhoc.jpg" class="rounded-lg h-72 w-48 object-cover mb-3">
+                <p class="text-DarkPurple font-semibold text-sm">Tam Ly</p>
+                <p class="font-semibold three-dots w-44">Tam Ly Hoc Tinh Cach</p>
+                <p class="text-DarkGrey text-xs three-dots w-44">Nguyen Thanh</p>
+                <div class="text-white mt-4 flex gap-1 w-44">
+                    <div class="border-2 border-DarkPurple rounded-lg text-DarkPurple py-2 px-3 mx-auto group-hover:w-full">125.000đ</div>
+                    <div class="trend-book__actions gap-1 hidden">
+                        <a class="dark-Purple-btn px-3 flex items-center"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a class="dark-Purple-btn px-3 flex items-center"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="trend-book flex flex-col items-center hover:drop-shadow-2xl hover:cursor-pointer">
+                <img src="imgs/tamlyhoc.jpg" class="rounded-lg h-72 w-48 object-cover mb-3">
+                <p class="text-DarkPurple font-semibold text-sm">Tam Ly</p>
+                <p class="font-semibold three-dots w-44">Tam Ly Hoc Tinh Cach</p>
+                <p class="text-DarkGrey text-xs three-dots w-44">Nguyen Thanh</p>
+                <div class="text-white mt-4 flex gap-1 w-44">
+                   <div class="border-2 border-DarkPurple rounded-lg text-DarkPurple py-2 px-3 mx-auto group-hover:w-full">125.000đ</div>
+                    <div class="trend-book__actions gap-1 hidden">
+                        <a class="dark-Purple-btn px-3 flex items-center"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a class="dark-Purple-btn px-3 flex items-center"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="trend-book flex flex-col items-center hover:drop-shadow-2xl hover:cursor-pointer">
+                <img src="imgs/tamlyhoc.jpg" class="rounded-lg h-72 w-48 object-cover mb-3">
+                <p class="text-DarkPurple font-semibold text-sm">Tam Ly</p>
+                <p class="font-semibold three-dots w-44">Tam Ly Hoc Tinh Cach</p>
+                <p class="text-DarkGrey text-xs three-dots w-44">Nguyen Thanh</p>
+                <div class="text-white mt-4 flex gap-1 w-44">
+                   <div class="border-2 border-DarkPurple rounded-lg text-DarkPurple py-2 px-3 mx-auto group-hover:w-full">125.000đ</div>
+                    <div class="trend-book__actions gap-1 hidden">
+                        <a class="dark-Purple-btn px-3 flex items-center"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a class="dark-Purple-btn px-3 flex items-center"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="trend-book flex flex-col items-center hover:drop-shadow-2xl hover:cursor-pointer">
+                <img src="imgs/tamlyhoc.jpg" class="rounded-lg h-72 w-48 object-cover mb-3">
+                <p class="text-DarkPurple font-semibold text-sm">Tam Ly</p>
+                <p class="font-semibold three-dots w-44">Tam Ly Hoc Tinh Cach</p>
+                <p class="text-DarkGrey text-xs three-dots w-44">Nguyen Thanh</p>
+                <div class="text-white mt-4 flex gap-1 w-44">
+                   <div class="border-2 border-DarkPurple rounded-lg text-DarkPurple py-2 px-3 mx-auto group-hover:w-full">125.000đ</div>
+                    <div class="trend-book__actions gap-1 hidden">
+                        <a class="dark-Purple-btn px-3 flex items-center"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a class="dark-Purple-btn px-3 flex items-center"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="trend-book flex flex-col items-center hover:drop-shadow-2xl hover:cursor-pointer">
+                <img src="imgs/tamlyhoc.jpg" class="rounded-lg h-72 w-48 object-cover mb-3">
+                <p class="text-DarkPurple font-semibold text-sm">Tam Ly</p>
+                <p class="font-semibold three-dots w-44">Tam Ly Hoc Tinh Cach</p>
+                <p class="text-DarkGrey text-xs three-dots w-44">Nguyen Thanh</p>
+                <div class="text-white mt-4 flex gap-1 w-44">
+                   <div class="border-2 border-DarkPurple rounded-lg text-DarkPurple py-2 px-3 mx-auto group-hover:w-full">125.000đ</div>
+                    <div class="trend-book__actions gap-1 hidden">
+                        <a class="dark-Purple-btn px-3 flex items-center"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a class="dark-Purple-btn px-3 flex items-center"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-14  my-36">
+        <div class="flex justify-between">
+            <div>
+                <p class="font-bold text-3xl mb-2">Best Seller of All Time</p>
+                <p class="text-DarkGrey">Like drop shadows, inner shadows allow you to create depth within two-dimensional designs.</p>
+            </div>
+            <a href="" class="flex gap-3 items-center text-DarkPurple">
+                <p class="hover:underline font-semibold">View more</p>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+        </div>
+        <div class="grid grid-cols-6 gap-10 mt-10">
+            <div class="flex flex-col items-center">
+                <img class="rounded-lg w-full h-72 object-cover mb-4" src="imgs/dacnhatam.png" alt="">
+                <div class="text-DarkOrange font-semibold flex gap-1 items-center"><i class="fa-solid fa-star"></i>4.7</div>
+                <p class="w-full three-dots font-semibold text-base text-center">Đắc nhân tâm</p>
+                <p class="text-DarkGrey">Nguyen Anh</p>
+                <div class="flex gap-2 mt-3 text-xs">
+                    <a class="pale-Purple-btn py-2.5 px-3" href="">125.000đ</a>
+                    <a class="pale-Purple-btn px-2.5 text-base flex items-center" href=""><i class="fa-solid fa-circle-exclamation"></i></a>
+                </div>
+            </div>
+            <div class="flex flex-col items-center">
+                <img class="rounded-lg w-full h-72 object-cover mb-4" src="imgs/tamlyhoc.jpg" alt="">
+                <div class="text-DarkOrange font-semibold flex gap-1 items-center"><i class="fa-solid fa-star"></i>4.7</div>
+                <p class="w-full three-dots font-semibold text-base text-center">Đắc nhân tâm</p>
+                <p class="text-DarkGrey">Nguyen Anh</p>
+                <div class="flex gap-2 mt-3 text-xs">
+                    <a class="pale-Purple-btn py-2.5 px-3" href="">125.000đ</a>
+                    <a class="pale-Purple-btn px-2.5 text-base flex items-center" href=""><i class="fa-solid fa-circle-exclamation"></i></a>
+                </div>
+            </div>
+            <div class="flex flex-col items-center">
+                <img class="rounded-lg w-full h-72 object-cover mb-4" src="imgs/tamlyhochanhvi.png" alt="">
+                <div class="text-DarkOrange font-semibold flex gap-1 items-center"><i class="fa-solid fa-star"></i>4.7</div>
+                <p class="w-full three-dots font-semibold text-base text-center">Đắc nhân tâm</p>
+                <p class="text-DarkGrey">Nguyen Anh</p>
+                <div class="flex gap-2 mt-3 text-xs">
+                    <a class="pale-Purple-btn py-2.5 px-3" href="">125.000đ</a>
+                    <a class="pale-Purple-btn px-2.5 text-base flex items-center" href=""><i class="fa-solid fa-circle-exclamation"></i></a>
+                </div>
+            </div>
+            <div class="flex flex-col items-center">
+                <img class="rounded-lg w-full h-72 object-cover mb-4" src="imgs/dacnhatam.png" alt="">
+                <div class="text-DarkOrange font-semibold flex gap-1 items-center"><i class="fa-solid fa-star"></i>4.7</div>
+                <p class="w-full three-dots font-semibold text-base text-center">Đắc nhân tâm</p>
+                <p class="text-DarkGrey">Nguyen Anh</p>
+                <div class="flex gap-2 mt-3 text-xs">
+                    <a class="pale-Purple-btn py-2.5 px-3" href="">125.000đ</a>
+                    <a class="pale-Purple-btn px-2.5 text-base flex items-center" href=""><i class="fa-solid fa-circle-exclamation"></i></a>
+                </div>
+            </div>
+            <div class="flex flex-col items-center">
+                <img class="rounded-lg w-full h-72 object-cover mb-4" src="imgs/dacnhatam.png" alt="">
+                <div class="text-DarkOrange font-semibold flex gap-1 items-center"><i class="fa-solid fa-star"></i>4.7</div>
+                <p class="w-full three-dots font-semibold text-base text-center">Đắc nhân tâm</p>
+                <p class="text-DarkGrey">Nguyen Anh</p>
+                <div class="flex gap-2 mt-3 text-xs">
+                    <a class="pale-Purple-btn py-2.5 px-3" href="">125.000đ</a>
+                    <a class="pale-Purple-btn px-2.5 text-base flex items-center" href=""><i class="fa-solid fa-circle-exclamation"></i></a>
+                </div>
+            </div>
+            <div class="flex flex-col items-center">
+                <img class="rounded-lg w-full h-72 object-cover mb-4" src="imgs/dacnhatam.png" alt="">
+                <div class="text-DarkOrange font-semibold flex gap-1 items-center"><i class="fa-solid fa-star"></i>4.7</div>
+                <p class="w-full three-dots font-semibold text-base text-center">Đắc nhân tâm</p>
+                <p class="text-DarkGrey">Nguyen Anh</p>
+                <div class="flex gap-2 mt-3 text-xs">
+                    <a class="pale-Purple-btn py-2.5 px-3" href="">125.000đ</a>
+                    <a class="pale-Purple-btn px-2.5 text-base flex items-center" href=""><i class="fa-solid fa-circle-exclamation"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  </body>
+</html>

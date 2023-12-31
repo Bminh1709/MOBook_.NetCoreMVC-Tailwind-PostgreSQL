@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link href="stylesheets/main.css" rel="stylesheet">
+    <link href="stylesheets/book.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+  <body>
+    <!-- ====== HEADER ====== -->
+    <button onclick="backToTopFunction()" title="Go to top" id="backToTop-btn" class="fixed bottom-8 right-8 text-xl dark-Purple-btn px-3 py-2"><i class="fa-solid fa-circle-arrow-up"></i></button>
+    <nav class="py-6 px-8 lg:px-14 border-b border-DarkPurple">
+        <div class="h-10 flex justify-between">
+            <div class="flex items-center gap-2">
+                <div class="text-white text-xl bg-DarkPurple rounded-lg px-3 h-full flex items-center">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                </div>
+                <p class="hidden sm:block text-2xl font-bold">MOBook</p>
+            </div>
+            <div class="flex w-1/2">
+                <!-- <div class="h-full px-3 bg-DarkPurple text-white text-2xl flex items-center rounded-l-lg">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div> -->
+                <form class="flex w-full">
+                    <input type="text" class="h-full border border-DarkPurple outline-none px-3 w-full rounded-l-lg border-r-0">
+                    <button type="submit" class="px-3 border border-DarkPurple h-full rounded-r-lg text-DarkPurple text-xl hover:bg-DarkPurple hover:text-PalePurple"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+
+            <!-- Responsive navbar -->
+            <label for="mobile-navbar" class="block lg:hidden text-3xl text-DarkPurple">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <input hidden type="checkbox" id="mobile-navbar">
+            <label for="mobile-navbar" class="nav__overlay"></label>
+            <div class="responsive-navbar flex flex-col gap-5 p-10 text-center text-xl fixed left-0 top-0 bg-PalePurple w-3/4 sm:w-1/2 h-full z-20 ">
+                <div class="flex items-center gap-2 w-fit mx-auto">
+                    <div class="text-white text-xl bg-DarkPurple rounded-lg px-3 h-full flex items-center">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                    </div>
+                    <p class="text-2xl font-bold text-DarkPurple">MOBook</p>
+                </div>
+                <div class="h-0.5 w-full bg-DarkPurple"></div>
+                <a class="" href="">Home</a>
+                <a class="" href="">About</a>
+                <a class="" href="">Contact</a>
+                <a class="" href="">Book</a>
+                <a class="text-DarkPurple" href="">Sign In</a>
+                <a class="text-DarkPurple" href="">Sign Up</a>
+            </div>
+            <!-- ================= -->
+
+            <div class="hidden lg:flex gap-3">
+                <div class="pale-Purple-btn px-4 flex items-center">
+                    Sign In
+                </div>
+                <div class="dark-Purple-btn px-4 flex items-center">
+                    Sign Up
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="hidden lg:block py-3 bg-DarkPurple">
+        <div class="w-fit mx-auto flex gap-32 text-base text-PaleGrey">
+            <a class="hover:text-white" href="">Home</a>
+            <a class="hover:text-white" href="">About</a>
+            <a class="hover:text-white" href="">Contact</a>
+            <a class="hover:text-white" href="">Book</a>
+            <a class="hover:text-white" href="">Magazine</a>
+        </div>
+    </div>
+    <!-- ==================== -->
+
+
+    <div class="py-3 px-8 lg:px-14 bg-PalePurple text-DarkPurple flex gap-2 font-medium text-sm">
+        <a href="" class="hover:underline">Home</a>
+        <p>/</p>
+        <a href="" class="hover:underline">Book</a>
+    </div>
+
+
+    <div class="px-8 lg:px-14 py-10 grid grid-cols-6 md:grid-cols-5 gap-8 xl:gap-14">
+        <div class="col-span-2 md:col-span-1">
+            <p class="text-3xl font-semibold">Filter</p>
+            <p class="text-sm text-DarkGrey mt-1">There are 650+ books have found</p>
+            <div class="flex flex-col gap-3 mt-6">
+                <div class="rounded-lg border border-DarkPurple">
+                    <label for="sortByCategory" class="flex items-center justify-between p-4 border-PalePurple border-b hover:cursor-pointer">
+                        <p>Sort By Category</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                    <input type="checkbox" id="sortByCategory" hidden>
+                    <div class="sortByCategory_section p-4 grid grid-cols-2 gap-y-2 text-sm">
+                        <div class="flex gap-2">
+                            <input type="checkbox" class="accent-DarkPurple" name="">
+                            <label for="" class="overflow-hidden text-ellipsis">Action</label>
+                        </div>
+                        <div class="flex gap-2">
+                            <input type="checkbox" class="accent-DarkPurple" name="">
+                            <label for="" class="overflow-hidden text-ellipsis">FantasyHistory</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-lg border border-DarkPurple">
+                    <label for="sortByPrice" class="flex items-center justify-between p-4 border-PalePurple border-b hover:cursor-pointer">
+                        <p>Sort By Price</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                    <input type="checkbox" id="sortByPrice" hidden>
+                    <div class="sortByPrice_section p-4 text-sm">
+                        <div class="flex flex-col gap-2">
+                            <label for="">Minimum price</label>
+                            <input type="number" class="outline-DarkPurple bg-PalePurple border-DarkPurple rounded-lg p-3">
+                        </div>
+                        <div class="flex flex-col gap-2 mt-3">
+                            <label for="">Maximum price</label>
+                            <input type="number" class="outline-DarkPurple bg-PalePurple border-DarkPurple rounded-lg p-3">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="dark-Purple-btn w-full py-3 font-semibold">Search</button>
+                    <button class="pale-Purple-btn w-full py-3 font-semibold mt-2">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-4 md:col-span-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <p class="text-3xl font-semibold">Library</p>
+                    <p class="text-sm text-DarkGrey mt-1">There are 650+ books have found</p>
+                </div>
+                <div class="group relative">
+                    <button class="flex gap-3 items-center py-1.5 text-sm px-2 border-2 border-DarkPurple bg-PalePurple text-DarkPurple rounded-lg focus:outline-none">
+                        <p>Sort By</p><i class="fa-solid fa-angle-down"></i>
+                    </button>
+                    <div class="absolute right-0 pt-2 rounded-lg hidden group-hover:block">
+                        <div class="border border-DarkPurple rounded-lg text-nowrap flex flex-col text-sm">
+                            <a href="#" class="block px-4 py-2 hover:bg-PalePurple">High to Low</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-PalePurple">Viet Nam Muon Nam</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-PalePurple">Viet Nam</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-PalePurple">Viet Nam</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-6">
+                <a href="" class="book_item border border-LightGrey rounded-lg p-3 group">
+                    <img src="/imgs/dacnhatam.png" class="group-hover:w-full w-40 h-56 rounded-lg mx-auto object-cover">
+                    <p class="three-dots mt-3 text-center">Tâm Lý học đám đông</p>
+                    <p class="text-sm text-DarkGrey text-center">Nguyen Thanh</p>
+                    <div class="flex justify-between mt-4">
+                        <div class="text-DarkOrange font-semibold"><i class="fa-solid fa-star"></i> 4.5</div>
+                        <p class="font-semibold text-DarkPurple">125.000d</p>
+                    </div>
+                </a>
+                <a href="" class="book_item border border-LightGrey rounded-lg p-3 group">
+                    <img src="/imgs/tamlyhoc.jpg" class="group-hover:w-full w-40 h-56 rounded-lg mx-auto object-cover">
+                    <p class="three-dots mt-3 text-center">Tâm Lý học đám đông</p>
+                    <p class="text-sm text-DarkGrey text-center">Nguyen Thanh</p>
+                    <div class="flex justify-between mt-4">
+                        <div class="text-DarkOrange font-semibold"><i class="fa-solid fa-star"></i> 4.5</div>
+                        <p class="font-semibold text-DarkPurple">125.000d</p>
+                    </div>
+                </a>
+            </div>
+            <div class="flex text-xs gap-3 justify-center mt-10">
+                <button class="pale-Purple-btn p-2 px-4 flex gap-3 items-center"><i class="fa-solid fa-chevron-left"></i><p>Previous</p></button>
+                <div class="rounded-lg border-PaleGrey flex gap-1">
+                    <button class="pale-Purple-btn p-2 px-4">1</button>
+                    <button class="pale-Purple-btn px-4">2</button>
+                    <button class="pale-Purple-btn px-4">3</button>
+                </div>
+                <button class="pale-Purple-btn p-2 px-4 flex gap-3 items-center"><p>Next</p><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-8 lg:px-14 pb-48 pt-32">
+        <p class="font-bold text-3xl mb-10">Maybe you like it!</p>
+        <div class="grid grid-cols-3">
+            <div class="flex gap-4 flex-col xl:flex-row items-center xl:items-stretch">
+                <img src="imgs/dacnhatam.png" class="w-40 h-56 object-cover rounded-lg">
+                <div class="flex flex-col gap-2 justify-between items-center xl:items-stretch">
+                    <p class="bg-PalePurple text-DarkPurple rounded-lg w-fit py-2 px-3 text-sm">Tam Ly</p>
+                    <div class="text-center xl:text-left">
+                        <p class="text-base font-medium three-dots w-48">Tam Ly Hoc Dam Dong</p>
+                        <p class="text-DarkGrey text-sm">Nguyen Thanh</p>
+                        <div class="text-DarkOrange font-semibold"><i class="fa-solid fa-star"></i> 4.5</div>
+                    </div>
+                    <p class="font-semibold text-lg text-DarkPurple">125.000d</p>
+                    <div class="flex gap-2 text-xs">
+                        <a href="" class="dark-Purple-btn py-3 px-3 flex gap-2 items-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="" class="dark-Purple-btn px-3.5 flex items-center"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-4 flex-col xl:flex-row items-center xl:items-stretch">
+                <img src="imgs/dacnhatam.png" class="w-40 h-56 object-cover rounded-lg">
+                <div class="flex flex-col gap-2 justify-between items-center xl:items-stretch">
+                    <p class="bg-PalePurple text-DarkPurple rounded-lg w-fit py-2 px-3 text-sm">Tam Ly</p>
+                    <div class="text-center xl:text-left">
+                        <p class="text-base font-medium three-dots w-48">Tam Ly Hoc Dam Dong</p>
+                        <p class="text-DarkGrey text-sm">Nguyen Thanh</p>
+                        <div class="text-DarkOrange font-semibold"><i class="fa-solid fa-star"></i> 4.5</div>
+                    </div>
+                    <p class="font-semibold text-lg text-DarkPurple">125.000d</p>
+                    <div class="flex gap-2 text-xs">
+                        <a href="" class="dark-Purple-btn py-3 px-3 flex gap-2 items-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="" class="dark-Purple-btn px-3.5 flex items-center"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-4 flex-col xl:flex-row items-center xl:items-stretch">
+                <img src="imgs/dacnhatam.png" class="w-40 h-56 object-cover rounded-lg">
+                <div class="flex flex-col gap-2 justify-between items-center xl:items-stretch">
+                    <p class="bg-PalePurple text-DarkPurple rounded-lg w-fit py-2 px-3 text-sm">Tam Ly</p>
+                    <div class="text-center xl:text-left">
+                        <p class="text-base font-medium three-dots w-48">Tam Ly Hoc Dam Dong</p>
+                        <p class="text-DarkGrey text-sm">Nguyen Thanh</p>
+                        <div class="text-DarkOrange font-semibold"><i class="fa-solid fa-star"></i> 4.5</div>
+                    </div>
+                    <p class="font-semibold text-lg text-DarkPurple">125.000d</p>
+                    <div class="flex gap-2 text-xs">
+                        <a href="" class="dark-Purple-btn py-3 px-3 flex gap-2 items-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="" class="dark-Purple-btn px-3.5 flex items-center"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="indicators" class="px-14 py-8 bg-DarkPurple flex flex-col lg:flex-row gap-5 justify-evenly text-white">
+        <div class="flex flex-row lg:flex-col justify-center gap-2 items-center">
+            <div class="flex gap-4 items-center text-3xl font-semibold">
+                <i class="fa-solid fa-users"></i>
+                <p>255K</p>
+            </div>
+            <p class="text-PalePurple">Happy customers over the world</p>
+        </div>
+        <div class="flex flex-row lg:flex-col gap-2 justify-center items-center">
+            <div class="flex gap-4 items-center text-3xl font-semibold">
+                <i class="fa-solid fa-pen-nib"></i>
+                <p>25K</p>
+            </div>
+            <p class="text-PalePurple">Renowned and celebrated authors</p>
+        </div>
+        <div class="flex flex-row lg:flex-col gap-2 justify-center items-center">
+            <div class="flex gap-4 items-center text-3xl font-semibold">
+                <i class="fa-solid fa-book"></i>
+                <p>450K</p>
+            </div>
+            <p class="text-PalePurple">A diverse collection of books</p>
+        </div>
+    </div>
+    <div class="grid grid-cols-5 gap-14 p-14">
+        <div class="flex flex-col gap-4 col-span-5 sm:col-span-3 lg:col-span-2">
+            <div class="w-fit mx-auto sm:mx-0 flex gap-2 items-center">
+                <div class="text-white text-xl bg-DarkPurple rounded-lg px-3 py-2.5 flex items-center">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                </div>
+                <p class="text-2xl font-bold text-DarkPurple">MOBook</p>
+            </div>
+            <p class="text-center sm:text-left">Tự hào giới thiệu MoGym - nơi bạn có thể thúc đẩy sức khỏe, tối ưu hóa thể lực, và khám phá tiềm năng bản thân. Chúng tôi cam kết tạo ra môi Tự hào giới thiệu MoGym - nơi bạn có thể thúc đẩy sức khỏe, tối ưu hóa thể lực, và khám phá tiềm năng bản thân. Chúng tôi cam kết tạo ra môi</p>
+            <div class="">
+                <div class="w-fit mx-auto sm:mx-0 flex text-DarkPurple gap-3 items-center">
+                    <i class="fa-solid fa-phone text-lg"></i>
+                    <p>0706162561 - 0905905716</p>
+                </div>
+                <div class="w-fit mx-auto sm:mx-0 flex text-DarkPurple gap-3 items-center mt-1">
+                    <i class="fa-solid fa-location-dot text-lg ml-0.5"></i>
+                    <p>78 Le Tan Trung, Tho Quang, Son Tra, Da Nang</p>
+                </div>
+            </div>
+            <div class="text-2xl flex gap-2 w-fit mx-auto sm:mx-0">
+                <a href="" class="pale-Purple-btn px-2 py-1"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="" class="pale-Purple-btn px-2 py-1"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="" class="pale-Purple-btn px-2 py-1"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="hidden lg:block col-span-1"> 
+            <p class="text-base font-medium mb-4">Quick Links</p>
+            <div class="flex flex-col gap-3">
+                <a href="" class="hover:underline">Home</a>
+                <a href="" class="hover:underline">About</a>
+                <a href="" class="hover:underline">Contact</a>
+                <a href="" class="hover:underline">Books</a>
+                <a href="" class="hover:underline">Magazines</a>
+            </div>
+        </div>
+        <div class="col-span-5 sm:col-span-2">
+            <p class="text-base font-medium mb-4">Don't miss our news</p>
+            <p>Instead of creating a shadow behind your selection, inner </p>
+            <form action="" class="flex gap-3 mt-3">
+                <input type="text" placeholder="Your Gmail" class="outline-none bg-PalePurple p-3 rounded-lg w-2/3">
+                <button class="dark-Purple-btn px-3">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="border border-t border-PaleGrey py-3">
+        <p class="text-center italic text-sm">This website is inspired and ideas from Google</p>
+    </div>
+
+
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="/javascripts/main.js"></script>
+</html>

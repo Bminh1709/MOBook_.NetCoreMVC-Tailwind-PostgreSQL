@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link href="stylesheets/main.css" rel="stylesheet">
+    <link href="stylesheets/book.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+  <body>
+    <!-- ====== HEADER ====== -->
+    <button onclick="backToTopFunction()" title="Go to top" id="backToTop-btn" class="fixed bottom-8 right-8 text-xl dark-Purple-btn px-3 py-2"><i class="fa-solid fa-circle-arrow-up"></i></button>
+    <nav class="py-6 px-8 lg:px-14 border-b border-DarkPurple">
+        <div class="h-10 flex justify-between">
+            <div class="flex items-center gap-2">
+                <div class="text-white text-xl bg-DarkPurple rounded-lg px-3 h-full flex items-center">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                </div>
+                <p class="hidden sm:block text-2xl font-bold">MOBook</p>
+            </div>
+            <div class="flex w-1/2">
+                <!-- <div class="h-full px-3 bg-DarkPurple text-white text-2xl flex items-center rounded-l-lg">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div> -->
+                <form class="flex w-full">
+                    <input type="text" class="h-full border border-DarkPurple outline-none px-3 w-full rounded-l-lg border-r-0">
+                    <button type="submit" class="px-3 border border-DarkPurple h-full rounded-r-lg text-DarkPurple text-xl hover:bg-DarkPurple hover:text-PalePurple"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+
+            <!-- Responsive navbar -->
+            <label for="mobile-navbar" class="block lg:hidden text-3xl text-DarkPurple">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <input hidden type="checkbox" id="mobile-navbar">
+            <label for="mobile-navbar" class="nav__overlay"></label>
+            <div class="responsive-navbar flex flex-col gap-5 p-10 text-center text-xl fixed left-0 top-0 bg-PalePurple w-3/4 sm:w-1/2 h-full z-20 ">
+                <div class="flex items-center gap-2 w-fit mx-auto">
+                    <div class="text-white text-xl bg-DarkPurple rounded-lg px-3 h-full flex items-center">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                    </div>
+                    <p class="text-2xl font-bold text-DarkPurple py-1">MOBook</p>
+                </div>
+                <div class="h-0.5 w-full bg-DarkPurple"></div>
+                <a class="" href="">Home</a>
+                <a class="" href="">About</a>
+                <a class="" href="">Contact</a>
+                <a class="" href="">Book</a>
+                <a class="text-DarkPurple" href="">Sign In</a>
+                <a class="text-DarkPurple" href="">Sign Up</a>
+            </div>
+            <!-- ================= -->
+
+            <div class="hidden lg:flex gap-3">
+                <div class="pale-Purple-btn px-4 flex items-center">
+                    Sign In
+                </div>
+                <div class="dark-Purple-btn px-4 flex items-center">
+                    Sign Up
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="hidden lg:block py-3 bg-DarkPurple">
+        <div class="w-fit mx-auto flex gap-32 text-base text-PaleGrey">
+            <a class="hover:text-white" href="">Home</a>
+            <a class="hover:text-white" href="">About</a>
+            <a class="hover:text-white" href="">Contact</a>
+            <a class="hover:text-white" href="">Book</a>
+            <a class="hover:text-white" href="">Magazine</a>
+        </div>
+    </div>
+    <!-- ==================== -->
+
+    <div class="py-3 px-8 lg:px-14 bg-PalePurple text-DarkPurple flex gap-2 font-medium text-sm">
+        <a href="" class="hover:underline">Home</a>
+        <p>/</p>
+        <a href="" class="hover:underline">Book</a>
+        <p>/</p>
+        <a href="" class="hover:underline">Cart</a>
+    </div>
+
+    <div class="text-sm sm:text-base mx-8 mt-14 p-5 bg-DarkPurple text-white rounded-lg grid grid-cols-12 gap-2">
+        <div class="col-span-5 sm:col-span-4 xl:col-span-5">
+            <p>Product</p>
+        </div>
+        <div class="col-span-4 sm:col-span-3 xl:col-span-2">
+            <p>Quantity</p>
+        </div>
+        <div class="sm:col-span-2 hidden sm:block">
+            <p>Price</p>
+        </div>
+        <div class="col-span-2">
+            <p>Total Price</p>
+        </div>
+        <div class="col-span-1">
+        </div>
+    </div>
+ 
+    <div class="mx-8 my-5 p-5 border border-LightGrey rounded-lg grid grid-cols-12 gap-2">
+        <div class="col-span-5 sm:col-span-4 xl:col-span-5 flex gap-2 md:gap-5">
+            <img src="/imgs/dacnhatam.png" class="rounded-lg w-14 sm:w-24 md:w-28 xl:w-36 object-contain">
+            <div>
+                <p class="font-semibold sm:text-lg md:text-xl">Dac Nhan Tam</p>
+                <p class="text-DarkGrey text-sm">Nguyen Thanh</p>
+            </div>
+        </div>
+        <div class="col-span-4 sm:col-span-3 xl:col-span-2">
+            <div class="rounded-lg bg-PalePurple w-fit border border-PaleGrey py-1 px-3 flex items-center gap-1" >
+                <button id="decreaseBtn" class="text-DarkPurple text-xl"><i class="fa-solid fa-square-minus"></i></button>
+                <input type="number" id="quantityInput" class="outline-none text-DarkPurple w-14 lg:w-20 px-2 bg-PalePurple" value="1">
+                <button id="increaseBtn" class="text-DarkPurple text-xl"><i class="fa-solid fa-square-plus"></i></button>
+            </div>
+        </div>
+        <div class="sm:col-span-2 hidden sm:block">
+            <p class="text-lg font-medium text-DarkPurple">125.000d</p>
+        </div>
+        <div class="col-span-2">
+            <p class="text-lg font-medium text-DarkPurple">125.000d</p>
+        </div>
+        <div class="col-span-1 flex justify-center items-start">
+            <button class="text-DarkPurple text-lg"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </div>
+
+    <div class="mx-8 p-12 lg:p-20 my-36 bg-PalePurple rounded-lg grid grid-cols-5 gap-8 sm:gap-20 lg:gap-32">
+        <div class="col-span-3 flex flex-col gap-7">
+            <p class="text-xl font-semibold">Shopping Summary</p>
+            <p class="text-sm text-DarkGrey">If you need to use a one-off grid-column/grid-column-start/grid-column-end value that doesn’t make sense to include in your theme, use square brackets to generate a property on the fly using any arbitrary value.</p>
+            <div class="flex flex-col gap-3">
+                <p class="font-medium text-sm">Have a coupon code?</p>
+                <form action="" class="flex gap-3">
+                    <div class="border border-PaleGrey rounded-lg p-3 flex gap-2 items-center w-fit">
+                        <i class="fa-solid fa-ticket text-DarkPurple text-lg"></i>
+                        <input type="text" class="bg-PalePurple px-2 outline-none w-32 sm:w-full" placeholder="Type here">
+                    </div>
+                    <button class="dark-Purple-btn px-4 border border-PaleGrey"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="col-span-2 flex flex-col gap-6">
+            <div class="flex justify-between">
+                <p class="text-DarkGrey">Subtotal</p>
+                <p class="font-semibold">124.000d</p>
+            </div>
+            <div class="flex justify-between">
+                <p class="text-DarkGrey">Tax</p>
+                <p class="font-semibold">124.000d</p>
+            </div>
+            <div class="flex justify-between">
+                <p class="text-DarkGrey">Discount</p>
+                <p class="font-semibold">- 124.000d</p>
+            </div>
+            <div class="w-full h-0.5 bg-PaleGrey"></div>
+            <div class="flex justify-between">
+                <p class="text-DarkGrey">Total</p>
+                <p class="font-semibold">124.000d</p>
+            </div>
+            <button class="dark-Purple-btn py-4 mt-7 border border-PaleGrey">CHECKOUT</button>
+            <a href="" class="text-DarkPurple text-xs font-semibold text-center">Continue Shopping</a>
+        </div>
+    </div>
+
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="/javascripts/main.js"></script>
+  <script>
+    $(document).ready(function() {
+        // Get references to the input and buttons
+        const $quantityInput = $('#quantityInput');
+        const $decreaseBtn = $('#decreaseBtn');
+        const $increaseBtn = $('#increaseBtn');
+
+        // Event listener for the minus button
+        $decreaseBtn.on('click', function() {
+            // Decrease the value unless it's already at the minimum
+            if ($quantityInput.val() > 1) {
+                $quantityInput.val(parseInt($quantityInput.val(), 10) - 1);
+            }
+        });
+
+        // Event listener for the plus button
+        $increaseBtn.on('click', function() {
+            // Increase the value
+            $quantityInput.val(parseInt($quantityInput.val(), 10) + 1);
+        });
+    });
+</script>
+</html>
